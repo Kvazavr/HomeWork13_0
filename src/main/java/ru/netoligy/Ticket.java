@@ -31,7 +31,7 @@ public class Ticket {
     }
 
     public int flyTime(int timeTo, int timeFrom) {
-        return timeTo-timeFrom;
+        return timeTo - timeFrom;
     }
 
     public int getPrice() {
@@ -61,6 +61,6 @@ public class Ticket {
     }
 
     TicketTimeComparator timeComparator = new TicketTimeComparator();
-    Ticket[] tickets = { ticket1, ticket2 };
-            Arrays.sort(tickets, timeComparator)
+    Ticket[] tickets = {ticket1, ticket2};
+            Arrays.sort(tickets,timeComparator)
 }
