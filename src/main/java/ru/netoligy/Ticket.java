@@ -31,7 +31,7 @@ public class Ticket {
     }
 
     public int flyTime(int timeTo, int timeFrom) {
-        int flyTime = int ;
+        return timeTo-timeFrom;
     }
 
     public int getPrice() {
@@ -57,10 +57,10 @@ public class Ticket {
 
     @Override
     public int hashCode() {
-        return Objects.hash(from, to, price, timeFrom, timeTo, flyTime);
+        return Objects.hash(from, to, price, timeFrom, timeTo);
     }
 
     TicketTimeComparator timeComparator = new TicketTimeComparator();
     Ticket[] tickets = { ticket1, ticket2 };
-            Arrays.sort(tickets,timeComparator)
+            Arrays.sort(tickets, timeComparator)
 }
