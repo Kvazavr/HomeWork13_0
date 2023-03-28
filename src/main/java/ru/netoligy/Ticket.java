@@ -9,7 +9,7 @@ public class Ticket {
     private String to; // аэропорт куда
     private int price; // цена
     private int timeFrom; // время вылета (по москве)
-    private int timeTo;// время прилёта (по москве)
+    private int timeTo; // время прилёта (по москве)
 
     public Ticket(String from, String to, int price, int timeFrom, int timeTo) {
         this.from = from;
@@ -19,9 +19,6 @@ public class Ticket {
         this.timeTo = timeTo;
     }
 
-    Ticket ticket1 = new Ticket("Moscow", "Saratov", 3500, 14, 16);
-    Ticket ticket2 = new Ticket("Sakhalin", "Samara", 42_000, 07, 17);
-
     public String getFrom() {
         return from;
     }
@@ -30,7 +27,7 @@ public class Ticket {
         return to;
     }
 
-    public int flyTime(int timeTo, int timeFrom) {
+    public int flyTime() {
         return timeTo - timeFrom;
     }
 
@@ -54,6 +51,11 @@ public class Ticket {
         Ticket ticket = (Ticket) o;
         return price == ticket.price && timeFrom == ticket.timeFrom && timeTo == ticket.timeTo && from.equals(ticket.from) && to.equals(ticket.to);
     }
+    Ticket ticket1 = new Ticket("Moscow","Saratov",3600,16,18);            ;
+    Ticket ticket2 = new Ticket("Moscow", "Saint-Petersburg", 2100, 14, 16);
+    Ticket ticket3 = new Ticket("Sakhalin", "Samara", 42_000, 7, 17);
+    Ticket ticket4 = new Ticket("Samara", "Omsk", 7_500, 9, 14);
+
 
     @Override
     public int hashCode() {
@@ -61,6 +63,6 @@ public class Ticket {
     }
 
     TicketTimeComparator timeComparator = new TicketTimeComparator();
-    Ticket[] tickets = {ticket1, ticket2};
-            Arrays.sort(tickets,timeComparator)
+    Ticket[] tickets = { ticket1, ticket2, ticket3, ticket4 };
+            Arrays.sort (tickets,timeComparator);
 }

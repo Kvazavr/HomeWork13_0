@@ -3,14 +3,7 @@ package ru.netoligy;
 public class AviaSouls {
     private Ticket[] tickets = new Ticket[0];
 
-    /**
-     * Вспомогательный метод для имитации добавления элемента в массив
-     *
-     * @param current Массив, в который мы хотим добавить элемент
-     * @param ticket  Элемент, который мы хотим добавить
-     * @return Возвращает новый массив, который выглядит как тот что мы передали,
-     * но с добавлением нового элемента в конец
-     */
+
     private Ticket[] addToArray(Ticket[] current, Ticket ticket) {
         Ticket[] tmp = new Ticket[current.length + 1];
         for (int i = 0; i < current.length; i++) {
@@ -20,11 +13,6 @@ public class AviaSouls {
         return tmp;
     }
 
-    /**
-     * Метод добавления билета в менеджер
-     *
-     * @param ticket Добавляемый билет
-     */
     public void add(Ticket ticket) {
         tickets = addToArray(tickets, ticket);
     }
@@ -33,13 +21,6 @@ public class AviaSouls {
         return tickets;
     }
 
-    /**
-     * Метод поиска билетов по маршруту
-     *
-     * @param from Откуда вылетаем
-     * @param to   Куда прилетаем
-     * @return Массив из подходящих билетов
-     */
     public Ticket[] search(String from, String to) {
         Ticket[] result = new Ticket[0]; // массив для ответа
         for (Ticket ticket : tickets) { // перебираем все билеты
