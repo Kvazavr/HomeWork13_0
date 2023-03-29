@@ -14,8 +14,8 @@ public class AviaSoulsTest {
 
     @Test
     public void compareToTest(){
-        Ticket.compareTo();
-        Ticket[] expected = new Ticket[] {ticket2; ticket1, ticket4, ticket3};
+        ticket.compareTo();
+        Ticket[] expected = new Ticket[] {ticket2, ticket1, ticket4, ticket3};
         Ticket[] actual = tickets.findAll();
         Assertions.assertArrayEquals(expected, actual);
 
