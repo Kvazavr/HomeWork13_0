@@ -2,7 +2,7 @@ package ru.netoligy;
 
 import java.util.Comparator;
 
-public class TicketTimeComparator {
+public class TicketTimeComparator implements Comparator<Ticket> {
 
     public int compare(Ticket t1, Ticket t2) {
         if (t1.flyTime() < t2.flyTime()) {

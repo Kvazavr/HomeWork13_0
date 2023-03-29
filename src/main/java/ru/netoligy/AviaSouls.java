@@ -1,8 +1,9 @@
 package ru.netoligy;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
-public class AviaSouls {
+public class AviaSouls implements AviaSoulsInterface {
     private Ticket[] tickets = new Ticket[0];
 
 
@@ -24,17 +25,23 @@ public class AviaSouls {
     }
 
 
-
     public Ticket[] search(String from, String to) {
-        Ticket[] result = new Ticket[0]; // массив для ответа
-        for (Ticket ticket : tickets) { // перебираем все билеты
-            if (ticket.getFrom().equals(from)) { // совпадает аэропорт вылета
-                if (ticket.getTo().equals(to)) { // совпадает аэропорт прилёта
-                    result = addToArray(result, ticket); // добавляем его в массив ответа
+        Ticket[] result = new Ticket[0];
+        for (Ticket ticket : tickets) {
+            if (ticket.getFrom().equals(from)) {
+                if (ticket.getTo().equals(to)) {
+                    result = addToArray(result, ticket);
                 }
             }
         }
+        Arrays.sort(result);
+        return result;
+    }
 
-    return result;
+    public Ticket[] searchAndSortBy(String from, String to, Comparator<Ticket> comparator) {
+
+        Ticket[] result = search(from, to);
+        Arrays.sort(result, comparator);
+        return result;
     }
 }
