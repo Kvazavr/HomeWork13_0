@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Objects;
 
-public class Ticket implements Comparable <Ticket> {
+public class Ticket implements Comparable<Ticket> {
     private String from; // аэропорт откуда
     private String to; // аэропорт куда
     private int price; // цена
@@ -44,7 +44,7 @@ public class Ticket implements Comparable <Ticket> {
     }
 
 
-       @Override
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -59,9 +59,9 @@ public class Ticket implements Comparable <Ticket> {
     }
 
     //    TicketTimeComparator timeComparator = new TicketTimeComparator();
-//    Ticket[] tickets = { ticket1, ticket2, ticket3, ticket4 };
-//            Arrays.sort (tickets, timeComparator);
-//
+    //    Ticket[] tickets = { ticket1, ticket2, ticket3, ticket4 };
+    //            Arrays.sort (tickets, timeComparator);
+    //
     @Override
     public int compareTo(Ticket o) {
         if (this.price < o.price) {
@@ -71,10 +71,5 @@ public class Ticket implements Comparable <Ticket> {
         } else {
             return 0;
         }
-    }
-
-    @Override
-    public void compareTo() {
-
     }
 }

@@ -1,5 +1,7 @@
 package ru.netoligy;
 
+import java.util.Arrays;
+
 public class AviaSouls {
     private Ticket[] tickets = new Ticket[0];
 
@@ -22,6 +24,7 @@ public class AviaSouls {
     }
 
 
+
     public Ticket[] search(String from, String to) {
         Ticket[] result = new Ticket[0]; // массив для ответа
         for (Ticket ticket : tickets) { // перебираем все билеты
@@ -31,6 +34,7 @@ public class AviaSouls {
                 }
             }
         }
-        return result;
+
+    return result;
     }
 }
