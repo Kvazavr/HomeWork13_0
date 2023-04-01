@@ -37,6 +37,7 @@ public class AviaSoulsTest {
         Assertions.assertArrayEquals(expected, actual);
 
     }
+
     @Test
     public void searchTwoTicketsTest() {
         AviaSouls aviaSouls = new AviaSouls();
@@ -50,6 +51,7 @@ public class AviaSoulsTest {
         Assertions.assertArrayEquals(expected, actual);
 
     }
+
     @Test
     public void searchNoOneTicketTest() {
         AviaSouls aviaSouls = new AviaSouls();
@@ -86,6 +88,7 @@ public class AviaSoulsTest {
         Assertions.assertArrayEquals(expected, actual);
 
     }
+
     @Test
     public void searchAndSortByNoOneTicket() {
         AviaSouls aviaSouls = new AviaSouls();
@@ -99,6 +102,7 @@ public class AviaSoulsTest {
         Assertions.assertArrayEquals(expected, actual);
 
     }
+
     @Test
     public void searchAndSortByOneTicket() {
         AviaSouls aviaSouls = new AviaSouls();
